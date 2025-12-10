@@ -1,4 +1,5 @@
-1. streamlit
-2. pandas
-3. requests
-4. API key
+streamlit
+pandas
+requests
+
+
