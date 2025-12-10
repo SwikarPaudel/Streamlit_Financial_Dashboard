@@ -7,16 +7,16 @@ try:
     #  ATTEMPT CLOUD DEPLOYMENT METHOD (st.secrets)
     # This will work when deployed on Streamlit Community Cloud
     api_key = st.secrets["alphavantage"]["api_key"]
-    st.caption("✅ Running with Streamlit Secrets (Cloud)")
+    st.caption(" Running with Streamlit Secrets (Cloud)")
 except (StreamlitAPIException, KeyError):
     #  LOCAL DEVELOPMENT METHOD
     # This will work when running 'streamlit run' locally
     try:
         from API_KEY import api_key 
-        st.caption("✅ Running with local API_KEY.py")
+        st.caption(" Running with local API_KEY.py")
     except ImportError:
         #  FAILURE STATE (Key not found anywhere)
-        st.error("❌ ERROR: API key not found. Please create an API_KEY.py file for local testing or configure secrets for cloud deployment.")
+        st.error("ERROR: API key not found. Please create an API_KEY.py file for local testing or configure secrets for cloud deployment.")
         st.stop()
 
 financial_functions = {
@@ -233,4 +233,5 @@ else:
     st.info(f"The **{the_endpoint}** endpoint is not yet fully implemented in this script. Please select one of the following: TIME_SERIES_DAILY, GLOBAL_QUOTE, OVERVIEW, INCOME_STATEMENT, SMA, or RSI.")
 
 st.markdown("---")
+
 st.caption("Powered by Alpha Vantage and a tired coder.")
