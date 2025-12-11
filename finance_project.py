@@ -1,5 +1,5 @@
 import requests, pandas as pd, streamlit as st 
-#  custom exception handler for st.secrets
+# custom exception handler for st.secrets
 from streamlit.errors import StreamlitAPIException 
 
 
@@ -235,3 +235,4 @@ else:
 st.markdown("---")
 
 st.caption("Powered by Alpha Vantage and a tired coder.")
+
